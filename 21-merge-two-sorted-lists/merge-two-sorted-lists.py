@@ -25,16 +25,19 @@ class Solution:
                 current = list2
                 list2 = list2.next
             new_head = current
+            
         while list1 and list2: 
             if list1.val <= list2.val:
                 current.next = list1
+                current = list1
                 list1 = list1.next
 
             else:
                 current.next = list2
+                current = list2
                 list2 = list2.next
 
-            current = current.next
+           # current = current.next
 
         if not list1:
             current.next = list2
@@ -43,5 +46,25 @@ class Solution:
 
         return new_head
     
+    # #another easier solution
+    # dummy = ListNode()
+    #     cur = dummy
+
+    #     while list1 and list2:
+    #         if list1.val > list2.val:
+    #             cur.next = list2
+    #             list2 = list2.next
+    #         else:
+    #             cur.next = list1
+    #             list1 = list1.next
+            
+    #         cur = cur.next
+        
+    #     if list1:
+    #         cur.next = list1
+    #     else:
+    #         cur.next = list2
+        
+    #     return dummy.next
 
         
