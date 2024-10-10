@@ -16,23 +16,23 @@ class Solution:
         # "ant": ["tan", "nat"],
         # "abt": ["bat"]
 
-        # hashMap = defaultdict(list)
-        # for i in range(len(strs)):
-        #     sortedWord = "".join(sorted(strs[i]))
-        #     hashMap[sortedWord].append(strs[i])
-        # print(hashMap)
-        # return hashMap.values()
-
-        ####Solution 3####       O(m*n)
         hashMap = defaultdict(list)
-        for word in strs:
-            count = [0] * 26    #a -> z
-            for letter in word:
-                count[ord(letter) - ord("a")] += 1
-            hashMap[tuple(count)].append(word)
-
+        for i in range(len(strs)):
+            sortedWord = "".join(sorted(strs[i]))
+            hashMap[sortedWord].append(strs[i])
         print(hashMap)
         return hashMap.values()
+
+        ####Solution 3####       O(m*n)
+        # hashMap = defaultdict(list)
+        # for word in strs:
+        #     count = [0] * 26    #a -> z
+        #     for letter in word:
+        #         count[ord(letter) - ord("a")] += 1
+        #     hashMap[tuple(count)].append(word)
+
+        # print(hashMap)
+        # return hashMap.values()
             
         
 
