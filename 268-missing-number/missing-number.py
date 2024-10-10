@@ -27,11 +27,16 @@ class Solution:
         # return 0
         
         ####Solution 3 #### time comp = O(n), space comp = O(1)
-        n = len(nums)
-        res = 0
-        for i in range(0, n+1):
-            res ^= i
-        for num in nums:
-            res ^= num
+        # n = len(nums)
+        # res = 0
+        # for i in range(0, n+1):
+        #     res ^= i            
+        # for num in nums:
+        #     res ^= num
+        # return res      # 0^1^2^3 ^ 0^1^3 = 2
 
-        return res
+        ####Solution 4 #### time comp = O(n), space comp = O(1)
+        n = len(nums)
+        sumNum = sum(nums) 
+        totalNum = int((n*(n+1))/2)
+        return totalNum-sumNum
