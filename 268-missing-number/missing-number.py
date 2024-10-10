@@ -40,3 +40,11 @@ class Solution:
         sumNum = sum(nums) 
         totalNum = int((n*(n+1))/2)
         return totalNum-sumNum
+
+        #incase you dont know the rule of the sum of the first n natural numbers
+        # res = len(nums)
+        # for i in range(len(nums)):     
+        #     res += i - nums[i]          #(0-3) + (1-0) + (2-1) + (3)
+        # return res
+
+            
